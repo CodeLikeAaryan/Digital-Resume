@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --mainTextColor-light: #000;
+    --secondaryTextColor-light: rgb(51, 51, 51);
+    --mainLinkColor-light: #0da2b8;
+    --mainBorderColor-light: #b0b0b0;
+    --mainBgColor-light: rgb(249, 250, 251);
+    --cardBgColor-light: #fff;
+}
+
+[data-theme="dark"] {
+    --mainTextColor: #fff;
+    --secondaryTextColor: #adb0b1;
+    --mainLinkColor: rgb(30, 190, 214);
+    --mainBorderColor: #2b3031;
+    --mainBgColor: #131415;
+    --cardBgColor: #1c1c1e;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--mainBgColor);
+}
+
+p,
+span,
+li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--mainLinkColor-light);
+}
+
+li {
+    line-height: 1.9em;
+}
+
+#container--main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.section--page {
+    padding: 2em 0;
+    border-bottom: 1px solid var(--mainBorderColor);
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+    flex-direction: column;
+}
+
+#bio,
+a {
+    font-weight: 300;
+}
+
+#user-name {
+    font-size: 2.5em;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card-project {
+    background-color: var(--cardBgColor);
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.card-project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border-bottom: 1px solid var(--mainBorderColor);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.card-project h3 {
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: var(--mainTextColor);
+}
+
+.card-project p {
+    font-size: 1em;
+    color: var(--secondaryTextColor);
+    margin-top: 0.5em;
+}
+
+.card-project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.line-break {
+    background-color: var(--mainBorderColor);
+    height: 1px;
+    width: 100%;
+    margin: 2em 0;
+}
+
+@media (max-width: 1200px) {
+    .card-project {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-project {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--mainLinkColor);
+}
+
+#email {
+    color: var(--mainTextColor);
+}
+
+#socials--list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    padding: 1em 0;
+}
+
+#socials--list a {
+    font-weight: 400;
+    color: var(--mainLinkColor);
+    font-size: 1em;
+    transition: transform 0.3s;
+}
+
+#socials--list a:hover {
+    transform: scale(1.1);
+}
+
+#qualifications--list {
+    list-style: none;
+    padding-left: 1.2em;
+}
+
+.card {
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    background-color: var(--cardBgColor);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin-bottom: 1.5em;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.card ul {
+    list-style: disc;
+    padding-left: 1.2em;
+}
+
+.card-project img {
+    width: 100%;
+    height: 150px;
+    /* or adjust as needed */
+    object-fit: cover;
+    /* Ensures images cover the area without distortion */
+    border-radius: 8px;
+    /* Optional: add some border-radius for styling */
+}
+
+.btn {
+    cursor: pointer;
+    border: 1px solid #090909;
+    background-color: transparent;
+    height: 30px;
+    /* Adjusted height */
+    width: 120px;
+    /* Adjusted width */
+    color: #08283d;
+    font-size: 0.9em;
+    /* Slightly smaller font size */
+    box-shadow: 0 4px 4px rgba(141, 129, 129, 0.6);
+    /* Adjusted shadow */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    /* Smooth transitions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    /* Centers the button horizontally */
+    /* Optional: Margin for vertical positioning */
+    /* margin-top: 10px; */
+}
+
+/* Hover state */
+.btn:hover {
+    background-color: #044169;
+    color: #ffffff;
+    transform: scale(1.05);
+    /* Slightly enlarges the button */
+    box-shadow: 0 6px 8px rgba(161, 151, 151, 0.4);
+    /* Enhanced shadow */
+}
+
+/* Active (pressed) state */
+.btn:active {
+    background-color: #032f40;
+    color: #ffffff;
+    transform: scale(0.95);
+    /* Slightly shrinks the button */
+    box-shadow: 0 2px 3px rgba(135, 126, 126, 0.3);
+    /* Reduced shadow */
+}
+
+.card ul li {
+    margin-bottom: 0.5em;
+}

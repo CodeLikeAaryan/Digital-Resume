@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Medical Report Summarizer</title>
+    <meta name="description" content="Medical Report Summarizer client project overview.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        #container--main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #007bff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        strong {
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 20px;
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.1em;
+        }
+
+        ul li::before {
+            content: '✔';
+            color: #020e1c;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.3em;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #007bff;
+        }
+
+        #back-link::before {
+            content: '\2190';
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container--main">
+        <a id="back-link" href="/index.html">Go Back</a>
+        <h1>Medical Report Summarizer</h1>
+
+        <h2>Project Overview</h2>
+        <p>The <strong>Medical Report Summarizer</strong> project was designed to streamline the handling of medical
+            reports by extracting key information, summarizing the content, and converting it into <strong>audio
+                format</strong>.
+            Leveraging advanced <strong>language models</strong> (LLMs) and <strong>text-to-speech technology</strong>,
+            this
+            tool provides an accessible and efficient way to interpret medical documents.</p>
+
+        <h2>Objective</h2>
+        <p>The aim was to create a system that can <strong>extract pertinent information</strong> from medical reports,
+            generate <strong>concise summaries</strong>, and convert these summaries into <strong>audio format</strong>.
+            This enables users, including healthcare professionals and patients, to easily access and understand medical
+            information.</p>
+
+        <h2>Approach</h2>
+        <p>We implemented a multi-step process involving:
+        <ul>
+            <li><strong>Text Extraction:</strong> Extracting text from medical reports using <strong>OCR
+                    technology</strong>.</li>
+            <li><strong>Summarization:</strong> Utilizing <strong>LLMs</strong> to generate <strong>concise
+                    summaries</strong> of the extracted text.</li>
+            <li><strong>Text-to-Speech Conversion:</strong> Converting the summaries into <strong>audio format</strong>
+                for easy listening.</li>
+        </ul>
+        </p>
+
+        <h2>Results</h2>
+        <ul>
+            <li>Developed a <strong>robust extraction system</strong> capable of accurately capturing information from
+                various types of medical reports.</li>
+            <li>Created a <strong>high-quality summarization model</strong> that provides <strong>clear and concise
+                    summaries</strong> of complex medical content.</li>
+            <li>Integrated a <strong>text-to-speech module</strong> that offers <strong>audio outputs</strong> for
+                improved accessibility and usability.</li>
+        </ul>
+    </div>
+</body>
+
+</html>
