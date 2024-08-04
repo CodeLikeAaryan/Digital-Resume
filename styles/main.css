@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 :root {
     --mainTextColor-light: #000;
     --secondaryTextColor-light: rgb(51, 51, 51);
@@ -7,6 +5,10 @@
     --mainBorderColor-light: #b0b0b0;
     --mainBgColor-light: rgb(249, 250, 251);
     --cardBgColor-light: #fff;
+    --btnBgColor-light: transparent;
+    --btnTextColor-light: #08283d;
+    --btnHoverBgColor-light: #044169;
+    --btnHoverTextColor-light: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -16,6 +18,13 @@
     --mainBorderColor: #2b3031;
     --mainBgColor: #131415;
     --cardBgColor: #1c1c1e;
+    --btnBgColor: #444;
+    /* Adjusted for better visibility in dark mode */
+    --btnTextColor: #fff;
+    /* White text for better contrast */
+    --btnHoverBgColor: #666;
+    /* Slightly lighter background on hover */
+    --btnHoverTextColor: #ffffff;
 }
 
 * {
@@ -29,6 +38,8 @@
 
 body {
     background-color: var(--mainBgColor);
+    padding: 0 1em;
+    /* Added padding for better mobile view */
 }
 
 p,
@@ -94,7 +105,6 @@ a {
     background-color: var(--cardBgColor);
     border: 1px solid var(--mainBorderColor);
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1em;
     flex: 1 1 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
@@ -222,50 +232,143 @@ a {
 .btn {
     cursor: pointer;
     border: 1px solid #090909;
-    background-color: transparent;
+    background-color: var(--btnBgColor);
+    /* Use variable for background color */
     height: 30px;
-    /* Adjusted height */
     width: 120px;
-    /* Adjusted width */
-    color: #08283d;
+    color: var(--btnTextColor);
+    /* Use variable for text color */
     font-size: 0.9em;
-    /* Slightly smaller font size */
-    box-shadow: 0 4px 4px rgba(141, 129, 129, 0.6);
-    /* Adjusted shadow */
     border-radius: 5px;
-    /* Rounded corners */
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    /* Smooth transitions */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    /* Centers the button horizontally */
-    /* Optional: Margin for vertical positioning */
-    /* margin-top: 10px; */
 }
 
-/* Hover state */
 .btn:hover {
-    background-color: #044169;
-    color: #ffffff;
+    background-color: var(--btnHoverBgColor);
+    /* Use variable for hover background color */
+    color: var(--btnHoverTextColor);
+    /* Use variable for hover text color */
     transform: scale(1.05);
-    /* Slightly enlarges the button */
-    box-shadow: 0 6px 8px rgba(161, 151, 151, 0.4);
-    /* Enhanced shadow */
 }
 
-/* Active (pressed) state */
 .btn:active {
-    background-color: #032f40;
-    color: #ffffff;
+    background-color: var(--btnHoverBgColor);
+    /* Use variable for active background color */
+    color: var(--btnHoverTextColor);
+    /* Use variable for active text color */
     transform: scale(0.95);
-    /* Slightly shrinks the button */
-    box-shadow: 0 2px 3px rgba(135, 126, 126, 0.3);
-    /* Reduced shadow */
 }
 
 .card ul li {
     margin-bottom: 0.5em;
+}
+
+#theme-switcher {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.theme {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 2px solid var(--mainBorderColor-light);
+    /* Add a border for better contrast */
+}
+
+.theme:hover {
+    height: 33px;
+    width: 33px;
+    border-color: var(--mainLinkColor-light);
+    /* Change border color on hover */
+}
+
+#theme-dark {
+    background-color: #000;
+    border-color: #fff;
+    /* White border for better contrast */
+}
+
+#theme-light {
+    background-color: #fff;
+    border-color: #000;
+    /* Black border for better contrast */
+}
+
+#theme-1 {
+    background-color: #999ECD;
+}
+
+#theme-2 {
+    background-color: #73B5DE;
+}
+
+#theme-3 {
+    background-color: #AD7EAD;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .card-project {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-project {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #container--main {
+        padding: 1em;
+    }
+
+    #user-name {
+        font-size: 2em;
+    }
+
+    #profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    #user-name {
+        font-size: 1.5em;
+    }
+
+    #socials--list {
+        gap: 1em;
+    }
+
+    #profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .section--page {
+        padding: 1em 0;
+    }
+
+    .card-project img {
+        height: 120px;
+    }
+
+    .btn {
+        height: 40px;
+        width: 100px;
+    }
 }

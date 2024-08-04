@@ -12,22 +12,27 @@
     width: 30px;
     border-radius: 50%;
     transition: 0.3s;
-    border: 1px solid;
+    border: 2px solid var(--mainBorderColor-light);
+    /* Add a border for better contrast */
 }
 
 .theme:hover {
     height: 33px;
     width: 33px;
+    border-color: var(--mainLinkColor-light);
+    /* Change border color on hover */
 }
 
 #theme-dark {
     background-color: #000;
-    /* border-color: #fff; */
+    border-color: #fff;
+    /* White border for better contrast */
 }
 
 #theme-light {
     background-color: #fff;
-    /* border-color: #000; */
+    border-color: #000;
+    /* Black border for better contrast */
 }
 
 #theme-1 {
